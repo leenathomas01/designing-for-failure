@@ -68,7 +68,7 @@ We designed a **Finite State Machine (FSM)** to reason through how a system woul
 | **ORANGE** | Apparent calm after storm                  | **ORANGE** - Recovery Validation (Distributed Paranoia enforced via multi-signal quorum) |
 | **BLACK** | Hardware survival mode                     | Fuse-antenna blown, minimal power, waiting for manual reset                                                             |
 
-### Key Innovation: Hysteresis with Multi-Signal Voting (MSV)
+### Structural Primitive: Distributed Paranoia + Asymmetric Transitions
 
 The critical QA contribution was identifying the **"False Dawn"** failure mode:
 
