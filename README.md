@@ -142,11 +142,14 @@ This framework was derived from a constraint-driven design exercise exploring sy
 The case study is preserved in full for reference. The extracted primitives are domain-independent.
 
 ---
+## Related Work
 
-## License
+**For a complete catalog of related research:**  
+📂 [AI Safety & Systems Architecture Research Index](https://github.com/leenathomas01/research-index)
 
-CC BY 4.0
-
+**Thematically related:**
+- [Zero Water AI Data Center](https://github.com/leenathomas01/zero-water-ai-dc) — Infrastructure optimization
+- [ZPRE-6G](https://github.com/leenathomas01/ZPRE-Implementation-6G) — Bio-inspired optimization for telecommunications
 ---
 
 ## Citation
