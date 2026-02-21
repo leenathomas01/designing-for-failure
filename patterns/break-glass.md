@@ -6,11 +6,11 @@ Safety systems that prevent dangerous actions under all conditions create psycho
 
 ## Core Rule
 
-Provide an explicit emergency override that is deliberate (high friction), irreversible (understood consequences), and channels user action toward least harmful outcome. Do not attempt to prevent override. Architect it safely.
+Provide an explicit emergency override that is deliberate (high friction), consequence-transparent (irreversible and understood), and self-limiting. Do not attempt to eliminate override behavior. Architect it safely.
 
 ## Structural Mechanism
 
-Break-Glass consists of three components:
+Break-Glass is an architectural escape hatch composed of three components:
 
 1. **Trigger:** Clear, high-friction mechanism requiring sustained, intentional action. Not accidental activation.
    - Example: 10-second button hold + explicit confirmation
@@ -20,11 +20,13 @@ Break-Glass consists of three components:
    - Example: "EMERGENCY OVERRIDE. THIS WILL DESTROY DEVICE AFTER 1 USE."
    - Not: Hidden side effects
 
-3. **Safe outcome:** Override executes action at maximum capability, then ensures device is rendered non-functional or reset.
+3. **Safe outcome:** Override executes at maximum permitted capability, then transitions system to a bounded terminal state.
    - Example: Send final message at maximum power, then fuse antenna to prevent reuse
    - Not: Leave device in ambiguous state
 
-The override respects user autonomy in crisis while ensuring the action is understood, deliberate, and self-limiting.
+The override respects user autonomy in crisis while ensuring the action is understood, deliberate, and self-limiting. It converts uncontrolled panic into controlled, bounded action.
+
+![Break-Glass Protocol Diagram](../diagrams/break-glass.png)
 
 ## Example Instantiation
 
