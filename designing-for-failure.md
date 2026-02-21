@@ -179,7 +179,7 @@ We used a hypothetical consumer device to reason through hardware-level failure 
 - Cryptographic key schedules
 - Anti-tamper implementation details
 
-**Lesson:** For systems designed to survive institutional collapse, openness is a feature, not a vulnerability.
+**Lesson:** For systems designed to operate when centralized infrastructure is unavailable, openness is a feature, not a vulnerability.
 
 ---
 
@@ -205,6 +205,21 @@ This exercise demonstrates principles applicable to AI safety and reliability en
 - Resilience requires repair-ability by non-original-designers
 - Trust must be inspectable, not assumed
 - Supply chain security matters as much as runtime security
+
+---
+### Structural Conclusion
+
+The device described here is fictional.
+The architectural constraints are not.
+
+Systems operating under catastrophic conditions require:
+- Distributed Paranoia
+- Asymmetric Transitions
+- Sacrificial Architecture
+- Break-Glass Protocols
+- Forensic Memory
+
+These primitives emerge regardless of domain when recovery discipline is treated as a design requirement rather than an afterthought.
 
 ---
 
