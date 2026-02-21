@@ -223,6 +223,3 @@ The value is not the device concept itself, but the **reasoning process** — de
 This exercise illustrates how QA and reliability thinking can be applied to ambiguous problems by progressively identifying hidden failure surfaces and designing systems that assume failure as the default state.
 
 ---
-
-**License:** CC BY 4.0  
-**Repository:** https://github.com/leenathomas01/designing-for-failure-case-study 
