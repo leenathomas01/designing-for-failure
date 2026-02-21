@@ -68,7 +68,7 @@ We designed a **Finite State Machine (FSM)** to reason through how a system woul
 | **ORANGE** | Apparent calm after storm                  | **ORANGE** - Recovery Validation (Distributed Paranoia enforced via multi-signal quorum) |
 | **BLACK** | Hardware survival mode                     | Fuse-antenna blown, minimal power, waiting for manual reset                                                             |
 
-### Structural Primitive: Distributed Paranoia + Asymmetric Transitions
+### Structural Primitive: Distributed Paranoia + Asymmetric Transitions (MSV)
 
 The critical QA contribution was identifying the **"False Dawn"** failure mode:
 
@@ -102,7 +102,7 @@ We applied chaos engineering principles to identify catastrophic failure modes i
 ### Test Case B: The Malicious Mesh (Siren Attack)
 **Scenario:** Bad actor spoofs "All Clear" signal. Thousands of devices return to normal operation prematurely. Secondary event destroys them.
 
-**Fix:** Physics-anchored trust model:
+**Fix:** Distributed trust grounded in externally verifiable signals (Distributed Paranoia applied to identity and beacon validation):
 - Beacons must carry cryptographic signature derived from verifiable external data (L1 solar telemetry + time)
 - Devices require peer consensus (3+ independent nodes reporting calm)
 - Ground attackers cannot easily spoof externally verifiable signals
