@@ -155,6 +155,6 @@ The case study is preserved in full for reference. The extracted primitives are 
 ## Citation
 
 ```
-Designing for Failure — Systems Thinking Case Study. (2026). 
+Designing for Failure (2026). 
 Retrieved from https://github.com/leenathomas01/designing-for-failure
 ```
