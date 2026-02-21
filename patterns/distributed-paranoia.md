@@ -6,11 +6,11 @@ Systems trusting single recovery signals fail catastrophically. After environmen
 
 ## Core Rule
 
-Recovery requires confirmation from N independent, non-correlated signals, sustained for duration T. Any anomaly resets the validation window.
+Recovery requires confirmation from N independent, non-correlated signals, sustained for duration T. If quorum is lost at any time, the validation window resets
 
 ## Structural Mechanism
 
-Multi-signal quorum voting enforces distributed verification. The system computes a quorum (e.g., 3 out of 5 signals nominal) and maintains a timer. If any signal deviates, the timer resets to zero. Only after sustained duration does the system transition to normal operation. This prevents false positives from isolated noise.
+Multi-signal quorum voting enforces distributed verification. The system computes a quorum (e.g., 3 out of 5 signals nominal) and maintains a timer. If quorum is broken at any time, the timer resets to zero. Only after sustained duration does the system transition to normal operation. This prevents false positives from isolated noise.
 
 Signals must be independent (uncorrelated), acquired from different physical sources, and evaluated via different measurement modalities. Correlated signals (e.g., two voltage readings from the same power supply) do not count toward quorum. Independence must be reasoned about structurally, not assumed statistically.
 
@@ -23,7 +23,7 @@ A communication system in geomagnetic storm scenario:
 - Signal 2: Solar flux data confirms nominal ranges
 - Signal 3: Backup satellite channel reports stable heartbeat
 
-All three signals must remain nominal for 6+ continuous hours. If any signal drops below baseline even once, the timer resets. After 6 hours of unbroken confirmation, the system can resume normal operations.
+All three signals must remain nominal for 6+ continuous hours. If quorum drops below the required threshold at any time, the timer resets. After 6 hours of unbroken confirmation, the system can resume normal operations.
 
 ## Pseudocode
 
