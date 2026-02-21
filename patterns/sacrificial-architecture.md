@@ -63,4 +63,3 @@ def recover():
 
 ---
 
-**Diagram:** `/diagrams/sacrificial-architecture.png`
