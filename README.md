@@ -145,7 +145,7 @@ The case study is preserved in full for reference. The extracted primitives are 
 ## Related Work
 
 **For a complete catalog of related research:**  
-📂 [AI Safety & Systems Architecture Research Index](https://github.com/leenathomas01/research-index)
+📂 [Research Index](https://github.com/leenathomas01/research-index)
 
 **Thematically related:**
 - [Zero Water AI Data Center](https://github.com/leenathomas01/zero-water-ai-dc) — Infrastructure optimization
