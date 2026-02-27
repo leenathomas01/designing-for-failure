@@ -79,3 +79,12 @@ def emergency_override():
 
 ---
 
+## Common Real-World Analogues
+
+This primitive appears in:
+- Physical fire alarm systems (“break glass” activation)
+- Emergency code protocols in hospitals
+- Privileged access escalation in cybersecurity
+- Manual bypass keys in industrial control systems
+
+---
