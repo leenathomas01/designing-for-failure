@@ -6,7 +6,10 @@ Safety systems that prevent dangerous actions under all conditions create psycho
 
 ## Core Rule
 
-Provide an explicit emergency override that is deliberate (high friction), consequence-transparent (irreversible and understood), and self-limiting. Do not attempt to eliminate override behavior. Architect it safely.
+Provide an explicit emergency override that is deliberate (high friction), consequence-transparent (irreversible and understood), and bounded (self-limiting in scope).
+Do not attempt to eliminate override behavior. Architect it safely.
+
+Override pathways must never be silent. All activations must be observable and logged.
 
 ## Structural Mechanism
 
@@ -24,7 +27,7 @@ Break-Glass is an architectural escape hatch composed of three components:
    - Example: Send final message at maximum power, then fuse antenna to prevent reuse
    - Not: Leave device in ambiguous state
 
-The override respects user autonomy in crisis while ensuring the action is understood, deliberate, and self-limiting. It converts uncontrolled panic into controlled, bounded action.
+The override respects user autonomy in crisis while ensuring the action is deliberate, consequence-transparent, and bounded. It converts uncontrolled intervention into controlled, auditable action.
 
 ![Break-Glass Protocol Diagram](../diagrams/break-glass.png)
 
@@ -49,6 +52,8 @@ def emergency_override():
     if not user_confirms_destruction():
         return ABORT
     
+    log_event("EMERGENCY_OVERRIDE_INITIATED")
+    
     # Notify consequence
     display_warning("DEVICE WILL BE DESTROYED")
     
@@ -66,7 +71,7 @@ def emergency_override():
 
 **Infrastructure:** Manual grid shutdown. Trigger: Two-person authorization + system state verification. Action: Graceful shutdown with load shedding, then manual reset required.
 
-**Finance:** Liquidity drain override (run on prevention). Trigger: Board authorization + public announcement. Action: Release liquidity, halt operations, full transparency on decision.
+**Finance:** Emergency liquidity release. Trigger: Board authorization + public disclosure. Action: Release reserves, halt operations, publish decision log.
 
 **Autonomous Systems:** Supervisor hard-stop. Trigger: Immediate supervisor command (no delay). Action: Halt all autonomous processes, revert to manual control, full telemetry freeze.
 
